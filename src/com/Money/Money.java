@@ -16,7 +16,7 @@ public class Money {
 
     private BigDecimal amount;
     private String currency;
-   private static Map<String, BigDecimal> rates = RatesLoader.loadrates();
+    private static Map<String, BigDecimal> rates = RatesLoader.loadrates();
 	
 
 	/*
