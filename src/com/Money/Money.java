@@ -31,7 +31,7 @@ public class Money {
     }
    */
     public Money( BigDecimal amount, String currency ) {
-        if(amount.compareTo(BigDecimal.ZERO) > 0) {
+        if(amount.compareTo(BigDecimal.ZERO) >= 0 ) {
             this.amount = amount;
         } else {
            throw new IllegalArgumentException("AMOUNT SHOULDN'T BE LESS THAN OR EQUAL TO ZERO!");
@@ -110,5 +110,15 @@ public class Money {
     public String getCurrency() { return this.currency; }
 	
     public String  toString(){ return this.amount + " " + this.currency; }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Money money = (Money) o;
+        return currency.equals(money.currency) &&
+                amount.equals(money.amount);
+    }
+
 
 }
