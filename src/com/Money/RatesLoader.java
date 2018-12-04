@@ -1,11 +1,9 @@
 package com.Money;
 
-import javax.imageio.IIOException;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
-import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;

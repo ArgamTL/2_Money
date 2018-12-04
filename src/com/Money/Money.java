@@ -3,6 +3,7 @@ package com.Money;
 import java.math.BigDecimal;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Objects;
 
 import java.lang.String;
 import java.io.IOException;
@@ -120,5 +121,9 @@ public class Money {
                 amount.equals(money.amount);
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash( currency, amount);
+    }
 
 }
